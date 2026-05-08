@@ -1,1 +1,319 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lưu Gia Trang Eco Farm</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Montserrat',sans-serif;
+    }
+
+    body{
+      background:#f5fff3;
+      color:#1f2d1f;
+      overflow-x:hidden;
+    }
+
+    header{
+      width:100%;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      top:0;
+      left:0;
+      z-index:1000;
+      background:rgba(255,255,255,0.85);
+      backdrop-filter:blur(10px);
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:800;
+      color:#2e7d32;
+    }
+
+    nav a{
+      text-decoration:none;
+      margin-left:25px;
+      color:#333;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#2e7d32;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:120px 10% 60px;
+      background:
+      linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.8)),
+      url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+    }
+
+    .hero-content{
+      max-width:900px;
+      animation:fadeUp 1.2s ease;
+    }
+
+    .hero h1{
+      font-size:68px;
+      font-weight:800;
+      color:#1b5e20;
+      margin-bottom:20px;
+      line-height:1.1;
+    }
+
+    .hero p{
+      font-size:22px;
+      line-height:1.7;
+      color:#444;
+      margin-bottom:35px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:16px 38px;
+      background:#43a047;
+      color:white;
+      text-decoration:none;
+      border-radius:50px;
+      font-weight:700;
+      transition:0.3s;
+      box-shadow:0 10px 30px rgba(67,160,71,0.3);
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+      background:#2e7d32;
+    }
+
+    .section{
+      padding:90px 10%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      color:#1b5e20;
+      margin-bottom:10px;
+    }
+
+    .section-title p{
+      color:#666;
+      font-size:18px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:white;
+      padding:35px;
+      border-radius:25px;
+      transition:0.4s;
+      box-shadow:0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card h3{
+      font-size:28px;
+      margin-bottom:15px;
+      color:#2e7d32;
+    }
+
+    .card p{
+      color:#555;
+      line-height:1.8;
+    }
+
+    .about{
+      background:#e8f5e9;
+      border-radius:35px;
+      padding:70px;
+      text-align:center;
+    }
+
+    .about h2{
+      font-size:45px;
+      color:#1b5e20;
+      margin-bottom:25px;
+    }
+
+    .about p{
+      font-size:20px;
+      line-height:1.9;
+      color:#444;
+      max-width:1000px;
+      margin:auto;
+    }
+
+    footer{
+      background:#1b5e20;
+      color:white;
+      text-align:center;
+      padding:35px;
+      margin-top:80px;
+    }
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(50px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:42px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+
+      nav{
+        display:none;
+      }
+
+      .about{
+        padding:40px 25px;
+      }
+
+      .about h2{
+        font-size:34px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">LƯU GIA TRANG</div>
+
+  <nav>
+    <a href="#">Trang Chủ</a>
+    <a href="#">Sản Phẩm</a>
+    <a href="#">Giới Thiệu</a>
+    <a href="#">Liên Hệ</a>
+  </nav>
+</header>
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <h1>
+      LƯU GIA TRANG<br>
+      ECO FARM
+    </h1>
+
+    <p>
+      Chuyên cung cấp gà & lợn vi sinh thảo mộc,
+      nuôi dưỡng tự nhiên, hướng đến sức khỏe cộng đồng
+      và nền nông nghiệp sạch bền vững.
+    </p>
+
+    <a class="btn" href="#">
+      Khám Phá Ngay
+    </a>
+
+  </div>
+
+</section>
+
+<section class="section">
+
+  <div class="section-title">
+    <h2>Sản Phẩm Chính</h2>
+    <p>Thực phẩm sạch từ mô hình chăn nuôi sinh học</p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>🐔 Gà Vi Sinh</h3>
+      <p>
+        Gà được nuôi bằng thảo mộc tự nhiên,
+        hạn chế kháng sinh, thịt săn chắc,
+        thơm ngon và giàu dinh dưỡng.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🐖 Lợn Thảo Mộc</h3>
+      <p>
+        Chăn nuôi bằng đệm lót sinh học,
+        thức ăn tự nhiên và quy trình an toàn sinh học hiện đại.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🌿 Nông Nghiệp Sạch</h3>
+      <p>
+        Hướng tới hệ sinh thái nông nghiệp tuần hoàn,
+        bảo vệ môi trường và sức khỏe người tiêu dùng.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section">
+
+  <div class="about">
+
+    <h2>Về Lưu Gia Trang</h2>
+
+    <p>
+      Lưu Gia Trang Eco Farm được xây dựng với định hướng phát triển
+      nông nghiệp sạch, ứng dụng công nghệ vi sinh và thảo mộc
+      vào chăn nuôi nhằm tạo ra nguồn thực phẩm chất lượng cao,
+      an toàn cho sức khỏe cộng đồng.
+    </p>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Lưu Gia Trang Eco Farm - Nông nghiệp sạch vì cộng đồng
+</footer>
+
+</body>
+</html>
