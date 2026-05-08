@@ -1,319 +1,219 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lưu Gia Trang Eco Farm</title>
+export default function LuuGiaTrangWebsite() {
+  return (
+    <div className="min-h-screen bg-[#f7f3ea] text-[#223222] overflow-x-hidden font-sans">
+      <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-sm">
+        <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+          <div className="text-3xl font-extrabold text-[#2c6a39] tracking-wide">
+            LƯU GIA <span className="text-[#d2872d]">TRANG</span>
+          </div>
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+          <nav className="hidden md:flex gap-8 font-semibold text-[#2d2d2d]">
+            <a href="#home" className="hover:text-[#2c6a39]">Trang Chủ</a>
+            <a href="#about" className="hover:text-[#2c6a39]">Giới Thiệu</a>
+            <a href="#products" className="hover:text-[#2c6a39]">Sản Phẩm</a>
+            <a href="#gallery" className="hover:text-[#2c6a39]">Hình Ảnh</a>
+            <a href="#contact" className="hover:text-[#2c6a39]">Liên Hệ</a>
+          </nav>
+        </div>
+      </header>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Montserrat',sans-serif;
-    }
+      <section
+        id="home"
+        className="relative min-h-screen flex items-center justify-center text-center px-6"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(18,35,18,0.45), rgba(18,35,18,0.55)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="max-w-5xl text-white pt-24 animate-[fadeUp_1.2s_ease]">
+          <p className="tracking-[0.4em] uppercase text-sm text-[#f5dca7] mb-6">
+            LƯU GIA TRANG ECO FARM
+          </p>
 
-    body{
-      background:#f5fff3;
-      color:#1f2d1f;
-      overflow-x:hidden;
-    }
+          <h1 className="text-5xl md:text-8xl font-extrabold leading-tight drop-shadow-2xl">
+            Nông nghiệp sạch
+            <br />
+            Thực phẩm lành
+          </h1>
 
-    header{
-      width:100%;
-      padding:20px 8%;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      position:fixed;
-      top:0;
-      left:0;
-      z-index:1000;
-      background:rgba(255,255,255,0.85);
-      backdrop-filter:blur(10px);
-      box-shadow:0 2px 10px rgba(0,0,0,0.05);
-    }
+          <p className="mt-10 text-lg md:text-2xl leading-10 text-white/90 max-w-4xl mx-auto">
+            Trang trại sinh thái kết hợp chăn nuôi vi sinh thảo mộc,
+            kiến tạo hệ sinh thái nông nghiệp bền vững,
+            mang đến nguồn thực phẩm an toàn cho cộng đồng.
+          </p>
 
-    .logo{
-      font-size:28px;
-      font-weight:800;
-      color:#2e7d32;
-    }
+          <div className="mt-12 flex flex-wrap justify-center gap-5">
+            <button className="bg-[#2c6a39] hover:bg-[#214f2b] transition px-9 py-5 rounded-full text-lg font-bold shadow-2xl">
+              Khám Phá Trang Trại
+            </button>
 
-    nav a{
-      text-decoration:none;
-      margin-left:25px;
-      color:#333;
-      font-weight:600;
-      transition:0.3s;
-    }
+            <button className="border border-white/40 bg-white/10 backdrop-blur-xl hover:bg-white hover:text-[#2c6a39] transition px-9 py-5 rounded-full text-lg font-bold">
+              Liên Hệ Ngay
+            </button>
+          </div>
+        </div>
+      </section>
 
-    nav a:hover{
-      color:#2e7d32;
-    }
+      <section id="about" className="py-28 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <p className="uppercase tracking-[0.4em] text-[#d2872d] text-sm font-bold">
+              Giới thiệu
+            </p>
 
-    .hero{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:120px 10% 60px;
-      background:
-      linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.8)),
-      url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=1600&auto=format&fit=crop');
-      background-size:cover;
-      background-position:center;
-    }
+            <h2 className="mt-5 text-4xl md:text-6xl font-extrabold text-[#23412f] leading-tight">
+              Hệ sinh thái Eco Farm
+              <br />
+              giữa thiên nhiên
+            </h2>
+          </div>
 
-    .hero-content{
-      max-width:900px;
-      animation:fadeUp 1.2s ease;
-    }
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <img
+              src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200&auto=format&fit=crop"
+              className="rounded-[36px] shadow-2xl h-[620px] object-cover w-full"
+            />
 
-    .hero h1{
-      font-size:68px;
-      font-weight:800;
-      color:#1b5e20;
-      margin-bottom:20px;
-      line-height:1.1;
-    }
+            <div>
+              <h3 className="text-4xl md:text-5xl font-extrabold leading-tight text-[#23412f] mb-8">
+                LƯU GIA TRANG
+                <br />
+                ECO FARM
+              </h3>
 
-    .hero p{
-      font-size:22px;
-      line-height:1.7;
-      color:#444;
-      margin-bottom:35px;
-    }
+              <p className="text-lg leading-10 text-[#536053] mb-6">
+                Chúng tôi phát triển mô hình nông nghiệp sạch ứng dụng vi sinh,
+                thảo mộc và quy trình sinh học hiện đại nhằm tạo ra nguồn thực phẩm chất lượng cao.
+              </p>
 
-    .btn{
-      display:inline-block;
-      padding:16px 38px;
-      background:#43a047;
-      color:white;
-      text-decoration:none;
-      border-radius:50px;
-      font-weight:700;
-      transition:0.3s;
-      box-shadow:0 10px 30px rgba(67,160,71,0.3);
-    }
+              <p className="text-lg leading-10 text-[#536053] mb-10">
+                Không chỉ là một trang trại, Lưu Gia Trang hướng tới xây dựng
+                không gian sinh thái xanh – sạch – bền vững, kết nối con người với thiên nhiên.
+              </p>
 
-    .btn:hover{
-      transform:translateY(-3px);
-      background:#2e7d32;
-    }
+              <button className="bg-[#2c6a39] hover:bg-[#214f2b] transition text-white px-9 py-5 rounded-full text-lg font-bold shadow-xl">
+                Xem sản phẩm
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    .section{
-      padding:90px 10%;
-    }
+      <section id="products" className="py-28 px-6 md:px-12 bg-[#eef5eb] rounded-t-[60px] rounded-b-[60px]">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <p className="uppercase tracking-[0.4em] text-[#d2872d] text-sm font-bold">
+              Sản phẩm nổi bật
+            </p>
 
-    .section-title{
-      text-align:center;
-      margin-bottom:60px;
-    }
+            <h2 className="mt-5 text-4xl md:text-6xl font-extrabold text-[#23412f] leading-tight">
+              Gà & Lợn Vi Sinh
+              <br />
+              Thảo Mộc
+            </h2>
+          </div>
 
-    .section-title h2{
-      font-size:42px;
-      color:#1b5e20;
-      margin-bottom:10px;
-    }
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: '🐔',
+                title: 'Gà Vi Sinh',
+                text: 'Chăn nuôi bằng thức ăn thảo mộc và hệ vi sinh tự nhiên giúp thịt săn chắc, thơm ngon và an toàn.',
+              },
+              {
+                icon: '🐖',
+                title: 'Lợn Thảo Mộc',
+                text: 'Ứng dụng đệm lót sinh học và quy trình chăn nuôi sạch hạn chế kháng sinh và tối ưu môi trường sống.',
+              },
+              {
+                icon: '🌿',
+                title: 'Nông Nghiệp Sạch',
+                text: 'Hướng tới mô hình tuần hoàn bền vững, bảo vệ môi trường và nâng cao chất lượng thực phẩm.',
+              },
+            ].map((item, i) => (
+              <div key={i} className="bg-white rounded-[30px] p-10 shadow-xl hover:-translate-y-3 transition duration-300">
+                <div className="text-5xl mb-6">{item.icon}</div>
+                <h4 className="text-3xl font-bold text-[#23412f] mb-5">{item.title}</h4>
+                <p className="text-[#596659] leading-9 text-lg">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-    .section-title p{
-      color:#666;
-      font-size:18px;
-    }
+      <section id="gallery" className="py-28 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <p className="uppercase tracking-[0.4em] text-[#d2872d] text-sm font-bold">
+              Không gian trang trại
+            </p>
 
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:30px;
-    }
+            <h2 className="mt-5 text-4xl md:text-6xl font-extrabold text-[#23412f]">
+              Thiên nhiên – Sinh thái – Bền vững
+            </h2>
+          </div>
 
-    .card{
-      background:white;
-      padding:35px;
-      border-radius:25px;
-      transition:0.4s;
-      box-shadow:0 10px 30px rgba(0,0,0,0.06);
-    }
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop',
+              'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop',
+              'https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200&auto=format&fit=crop',
+            ].map((img, i) => (
+              <img
+                key={i}
+                src={img}
+                className="rounded-[30px] shadow-2xl h-[380px] object-cover w-full hover:scale-[1.03] transition duration-300"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
 
-    .card:hover{
-      transform:translateY(-10px);
-    }
+      <section className="px-6 md:px-12 pb-24" id="contact">
+        <div
+          className="max-w-7xl mx-auto rounded-[50px] px-8 py-24 text-center text-white"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(24,45,24,0.85), rgba(24,45,24,0.88)), url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          <p className="uppercase tracking-[0.4em] text-[#f3d89d] text-sm font-bold mb-5">
+            Liên hệ
+          </p>
 
-    .card h3{
-      font-size:28px;
-      margin-bottom:15px;
-      color:#2e7d32;
-    }
+          <h2 className="text-5xl md:text-7xl font-extrabold mb-8">
+            LƯU GIA PHÁT
+          </h2>
 
-    .card p{
-      color:#555;
-      line-height:1.8;
-    }
+          <p className="max-w-4xl mx-auto text-lg md:text-2xl leading-10 text-white/85">
+            Nuôi dưỡng tự nhiên – Vì sức khỏe cộng đồng.
+            Đồng hành cùng LƯU GIA TRANG ECO FARM trong hành trình phát triển
+            nền nông nghiệp sạch và bền vững.
+          </p>
 
-    .about{
-      background:#e8f5e9;
-      border-radius:35px;
-      padding:70px;
-      text-align:center;
-    }
+          <div className="mt-12 flex flex-wrap justify-center gap-5">
+            <button className="bg-[#2c6a39] hover:bg-[#214f2b] transition px-9 py-5 rounded-full text-lg font-bold shadow-xl">
+              Hotline
+            </button>
 
-    .about h2{
-      font-size:45px;
-      color:#1b5e20;
-      margin-bottom:25px;
-    }
+            <button className="border border-white/40 bg-white/10 hover:bg-white hover:text-[#2c6a39] transition px-9 py-5 rounded-full text-lg font-bold">
+              Facebook
+            </button>
 
-    .about p{
-      font-size:20px;
-      line-height:1.9;
-      color:#444;
-      max-width:1000px;
-      margin:auto;
-    }
+            <button className="border border-white/40 bg-white/10 hover:bg-white hover:text-[#2c6a39] transition px-9 py-5 rounded-full text-lg font-bold">
+              Zalo
+            </button>
+          </div>
+        </div>
+      </section>
 
-    footer{
-      background:#1b5e20;
-      color:white;
-      text-align:center;
-      padding:35px;
-      margin-top:80px;
-    }
-
-    @keyframes fadeUp{
-      from{
-        opacity:0;
-        transform:translateY(50px);
-      }
-      to{
-        opacity:1;
-        transform:translateY(0);
-      }
-    }
-
-    @media(max-width:768px){
-
-      .hero h1{
-        font-size:42px;
-      }
-
-      .hero p{
-        font-size:18px;
-      }
-
-      nav{
-        display:none;
-      }
-
-      .about{
-        padding:40px 25px;
-      }
-
-      .about h2{
-        font-size:34px;
-      }
-    }
-
-  </style>
-</head>
-
-<body>
-
-<header>
-  <div class="logo">LƯU GIA TRANG</div>
-
-  <nav>
-    <a href="#">Trang Chủ</a>
-    <a href="#">Sản Phẩm</a>
-    <a href="#">Giới Thiệu</a>
-    <a href="#">Liên Hệ</a>
-  </nav>
-</header>
-
-<section class="hero">
-
-  <div class="hero-content">
-
-    <h1>
-      LƯU GIA TRANG<br>
-      ECO FARM
-    </h1>
-
-    <p>
-      Chuyên cung cấp gà & lợn vi sinh thảo mộc,
-      nuôi dưỡng tự nhiên, hướng đến sức khỏe cộng đồng
-      và nền nông nghiệp sạch bền vững.
-    </p>
-
-    <a class="btn" href="#">
-      Khám Phá Ngay
-    </a>
-
-  </div>
-
-</section>
-
-<section class="section">
-
-  <div class="section-title">
-    <h2>Sản Phẩm Chính</h2>
-    <p>Thực phẩm sạch từ mô hình chăn nuôi sinh học</p>
-  </div>
-
-  <div class="cards">
-
-    <div class="card">
-      <h3>🐔 Gà Vi Sinh</h3>
-      <p>
-        Gà được nuôi bằng thảo mộc tự nhiên,
-        hạn chế kháng sinh, thịt săn chắc,
-        thơm ngon và giàu dinh dưỡng.
-      </p>
+      <footer className="text-center text-[#5f685f] py-10 text-sm">
+        © 2026 LƯU GIA TRANG ECO FARM — Nông nghiệp sạch • Thực phẩm lành
+      </footer>
     </div>
-
-    <div class="card">
-      <h3>🐖 Lợn Thảo Mộc</h3>
-      <p>
-        Chăn nuôi bằng đệm lót sinh học,
-        thức ăn tự nhiên và quy trình an toàn sinh học hiện đại.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>🌿 Nông Nghiệp Sạch</h3>
-      <p>
-        Hướng tới hệ sinh thái nông nghiệp tuần hoàn,
-        bảo vệ môi trường và sức khỏe người tiêu dùng.
-      </p>
-    </div>
-
-  </div>
-
-</section>
-
-<section class="section">
-
-  <div class="about">
-
-    <h2>Về Lưu Gia Trang</h2>
-
-    <p>
-      Lưu Gia Trang Eco Farm được xây dựng với định hướng phát triển
-      nông nghiệp sạch, ứng dụng công nghệ vi sinh và thảo mộc
-      vào chăn nuôi nhằm tạo ra nguồn thực phẩm chất lượng cao,
-      an toàn cho sức khỏe cộng đồng.
-    </p>
-
-  </div>
-
-</section>
-
-<footer>
-  © 2026 Lưu Gia Trang Eco Farm - Nông nghiệp sạch vì cộng đồng
-</footer>
-
-</body>
-</html>
+  )
+}
